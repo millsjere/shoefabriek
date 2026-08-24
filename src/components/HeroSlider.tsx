@@ -49,7 +49,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
             fill
             priority={i === 0}
             sizes="100vw"
-            className="object-cover object-bottom"
+            className="object-cover object-left-bottom sm:object-bottom"
           />
           <div className="absolute inset-0 bg-linear-to-r from-ink/45 via-ink/25 to-transparent" />
 
