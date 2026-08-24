@@ -133,8 +133,8 @@ export default function Home() {
           <div className="px-5 py-20 sm:px-8 lg:py-28 lg:pl-8 xl:pl-16">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-gold">Our Craft</p>
             <h2 className="mt-3 font-display text-5xl leading-tight sm:text-4xl lg:text-5xl">
-              Built on Craftsmanship. <br />
-              Driven by Passion.
+              Built for Every Step. <br />
+              Made for Your Step.
             </h2>
             <p className="mt-5 max-w-lg text-cream/80">
               Every pair is expertly crafted using genuine leather and the finest materials to
