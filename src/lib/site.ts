@@ -1,8 +1,8 @@
 export const site = {
   name: "Shoe Fabriek",
   tagline: "Every Step Counts",
-  phoneDisplay: "+233 24 123 4567",
-  phoneHref: "tel:+233241234567",
+  phoneDisplay: "+233 59 913 8920",
+  phoneHref: "tel:+233599138920",
   whatsappHref: "https://wa.me/233599138920",
   email: "info@shoefabriek.com",
   address: "Akropong-Akuapem, Eastern Region, Ghana",
