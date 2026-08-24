@@ -95,7 +95,7 @@ const slides: Slide[] = [
     title: "Discipline.",
     highlight: "Durability. Every Shift.",
     description: "Parade-ready boots built to stand up to long hours and hard duty.",
-    ctaLabel: "View Uniform Boots",
+    ctaLabel: "Order Now",
     ctaHref: whatsappEnquiry("Hi, I'm interested in your Security & Uniform shoe collection."),
   },
 ];

@@ -64,7 +64,9 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
                 {slide.title}{" "}
                 {slide.highlight && <span className="text-gold">{slide.highlight}</span>}
               </h1>
-              <p className="mt-5 text-base text-cream/85 sm:text-lg">{slide.description}</p>
+              <p className="mt-5 hidden text-base text-cream/85 sm:block sm:text-lg">
+                {slide.description}
+              </p>
               <a
                 href={slide.ctaHref}
                 target="_blank"
