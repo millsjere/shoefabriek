@@ -23,7 +23,7 @@ export default function CollectionsGrid() {
               alt={item.title}
               fill
               sizes={featured ? "(min-width: 768px) 40vw, 85vw" : "(min-width: 768px) 25vw, 85vw"}
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-left transition-transform duration-500 group-hover:scale-105 md:object-center"
               priority={featured}
             />
             <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/10 to-transparent" />
@@ -49,7 +49,7 @@ export default function CollectionsGrid() {
               </div>
             ) : (
               <div className="absolute inset-x-0 bottom-0 p-4">
-                <h3 className="font-display text-lg leading-tight text-cream">{item.title}</h3>
+                <h3 className="font-display text-2xl leading-tight text-cream">{item.title}</h3>
               </div>
             )}
           </div>

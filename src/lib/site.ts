@@ -3,7 +3,7 @@ export const site = {
   tagline: "Every Step Counts",
   phoneDisplay: "+233 24 123 4567",
   phoneHref: "tel:+233241234567",
-  whatsappHref: "https://wa.me/233241234567",
+  whatsappHref: "https://wa.me/233599138920",
   email: "info@shoefabriek.com",
   address: "Akropong-Akuapem, Eastern Region, Ghana",
   keyMessage:
@@ -28,32 +28,54 @@ export const navLinks = [
 
 export const collections = [
   {
-    title: "Security & Uniform",
+    title: "Security Boots",
     slug: "security-uniform",
     image: "/images/categories/security-uniform.png",
     blurb: "Parade-ready boots built for long shifts and disciplined service.",
-    products: ["All-leather security boots", "Leather security boots / PVC quarters", "Officers' shoes"],
+    products: [
+      "All-leather security boots",
+      "Leather security boots / PVC quarters",
+      "Officers' shoes",
+    ],
   },
   {
-    title: "Safety & Industrial",
+    title: "Safety Boots",
     slug: "safety-industrial",
     image: "/images/categories/safety-industrial.png",
     blurb: "Reinforced boots engineered to protect hard-working feet on site.",
-    products: ["Safety boots / steel toe cap", "Safety boots / composite toe", "Work shoes", "Driving safety shoes"],
+    products: [
+      "Safety boots / steel toe cap",
+      "Safety boots / composite toe",
+      "Work shoes",
+      "Driving safety shoes",
+    ],
   },
   {
-    title: "School & Institutional",
+    title: "School Shoes",
     slug: "school-institutional",
     image: "/images/categories/school-institutional.png",
-    blurb: "Durable, comfortable footwear built for the school run and the classroom.",
-    products: ["Boys' shoes", "Girls' shoes", "School sandals", "Institutional footwear"],
+    blurb:
+      "Durable, comfortable footwear built for the school run and the classroom.",
+    products: [
+      "Boys' shoes",
+      "Girls' shoes",
+      "School sandals",
+      "Institutional footwear",
+    ],
   },
   {
-    title: "Casual & Lifestyle",
+    title: "Casual Shoes",
     slug: "casual-lifestyle",
     image: "/images/categories/casual-lifestyle.png",
-    blurb: "Everyday shoes that carry you from the office to the weekend in style.",
-    products: ["Men's casual shoes", "Women's casual shoes", "Men's slippers", "Women's slippers", "Driving shoes"],
+    blurb:
+      "Everyday shoes that carry you from the office to the weekend in style.",
+    products: [
+      "Men's casual shoes",
+      "Women's casual shoes",
+      "Men's slippers",
+      "Women's slippers",
+      "Driving shoes",
+    ],
   },
 ];
 
