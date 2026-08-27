@@ -50,16 +50,23 @@ export default function DealersPage() {
           Why Partner With Us?
         </h2>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {uniqueSellingPoints.map((point, i) => {
             const Icon = uspIcons[i];
             return (
-              <div key={point.title} className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold text-ink">
-                  <Icon className="h-7 w-7" strokeWidth={1.5} />
+              <div
+                key={point.title}
+                className="group relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-8 text-center transition-colors hover:border-gold"
+              >
+                <span className="pointer-events-none absolute -right-2 -top-6 select-none font-display text-8xl font-bold leading-none text-ink/5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="relative z-10">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold text-ink">
+                    <Icon className="h-7 w-7" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="mt-4 font-display text-xl tracking-wide text-ink">{point.title}</h3>
                 </div>
-                <h3 className="mt-4 font-display text-xl tracking-wide text-ink">{point.title}</h3>
-                <p className="mt-2 text-base text-ink-soft">{point.description}</p>
               </div>
             );
           })}

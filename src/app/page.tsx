@@ -159,16 +159,23 @@ export default function Home() {
         </div>
 
         <div className="border-t border-white/10">
-          <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-12 sm:px-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-[1600px] gap-6 px-5 py-12 sm:px-8 sm:grid-cols-2 lg:grid-cols-4">
             {uniqueSellingPoints.map((point, i) => {
               const Icon = uspIcons[i];
               return (
-                <div key={point.title}>
-                  <Icon className="h-8 w-8 text-gold" strokeWidth={1.5} />
-                  <h3 className="mt-4 font-display text-xl tracking-wide text-gold">
-                    {point.title}
-                  </h3>
-                  <p className="mt-2 text-base text-cream/70">{point.description}</p>
+                <div
+                  key={point.title}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 transition-colors hover:border-gold/40"
+                >
+                  <span className="pointer-events-none absolute -right-2 -top-6 select-none font-display text-8xl font-bold leading-none text-white/5">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="relative z-10">
+                    <Icon className="h-8 w-8 text-gold" strokeWidth={1.5} />
+                    <h3 className="mt-4 font-display text-xl tracking-wide text-gold">
+                      {point.title}
+                    </h3>
+                  </div>
                 </div>
               );
             })}

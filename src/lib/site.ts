@@ -80,22 +80,10 @@ export const collections = [
 ];
 
 export const uniqueSellingPoints = [
-  {
-    title: "Quality & Durability",
-    description: "Let's have Quality Shoes.",
-  },
-  {
-    title: "Responsive Supply",
-    description: "Shorter lead time and Made In Ghana.",
-  },
-  {
-    title: "Built for Your Needs",
-    description: "We make every footwear type.",
-  },
-  {
-    title: "Reliable Capacity",
-    description: "Large manufacturing capacity.",
-  },
+  { title: "Let's have Quality Shoes." },
+  { title: "Shorter lead time and Made In Ghana." },
+  { title: "We make every footwear type." },
+  { title: "Large manufacturing capacity." },
 ];
 
 export const profitStory = [
