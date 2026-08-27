@@ -82,23 +82,19 @@ export const collections = [
 export const uniqueSellingPoints = [
   {
     title: "Quality & Durability",
-    description:
-      "Genuine leather options and durable soles designed for demanding Ghanaian conditions and to international quality standards.",
+    description: "Let's have Quality Shoes.",
   },
   {
     title: "Responsive Supply",
-    description:
-      "Local production means shorter lead times, easier replenishment and reduced exposure to international freight and import costs.",
+    description: "Shorter lead time and Made In Ghana.",
   },
   {
     title: "Built for Your Needs",
-    description:
-      "Security boots, safety boots, school shoes and casual footwear — serving institutional, corporate and retail requirements.",
+    description: "We make every footwear type.",
   },
   {
     title: "Reliable Capacity",
-    description:
-      "Modern manufacturing infrastructure with capacity of up to 800 pairs per day across different footwear models.",
+    description: "Large manufacturing capacity.",
   },
 ];
 

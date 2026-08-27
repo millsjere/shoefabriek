@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Check, Factory, ShieldCheck, Target, Truck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { profitStory, site, uniqueSellingPoints } from "@/lib/site";
@@ -65,6 +64,19 @@ export default function DealersPage() {
             );
           })}
         </div>
+
+        <div className="mt-12 text-center">
+          <a
+            href={`${site.whatsappHref}?text=${encodeURIComponent(
+              "Hi, I'm interested in becoming a Shoe Fabriek dealer. Could you share more details?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-gold-dark"
+          >
+            Become a Dealer
+          </a>
+        </div>
       </section>
 
       <section className="bg-wine text-cream">
@@ -78,7 +90,7 @@ export default function DealersPage() {
         </div>
       </section>
 
-      <section className="bg-cream-dim">
+      {/* <section className="bg-cream-dim">
         <div className="grid lg:grid-cols-2">
           <div className="px-5 py-20 sm:px-8 lg:py-28 lg:pl-24">
             <h2 className="font-display text-3xl text-ink sm:text-3xl lg:text-4xl">Dealer Requirements</h2>
@@ -114,7 +126,7 @@ export default function DealersPage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8">
         <h2 className="text-center font-display text-3xl text-ink sm:text-4xl">
@@ -155,12 +167,16 @@ export default function DealersPage() {
           <p className="mt-4 max-w-md text-cream/85">
             Be part of a growing brand that values quality, partnership and progress.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={`${site.whatsappHref}?text=${encodeURIComponent(
+              "Hi, I'm interested in becoming a Shoe Fabriek dealer. Could you share more details?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center rounded-full bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-gold-dark"
           >
             Apply Now
-          </Link>
+          </a>
         </div>
       </section>
     </>
