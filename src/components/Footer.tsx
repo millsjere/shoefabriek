@@ -22,6 +22,17 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex items-center gap-3">
               <a
+                href="https://www.facebook.com/share/1DGjEngWi5/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-cream/10 text-cream transition-colors hover:bg-gold hover:text-ink"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4.5 w-4.5">
+                  <path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.46 1.5-1.46H16.5V4.36C16.2 4.32 15.2 4.24 14 4.24c-2.44 0-4.11 1.49-4.11 4.22V10.5H7.4v3h2.49V21h3.61Z" />
+                </svg>
+              </a>
+              <a
                 href="https://www.tiktok.com/@shoefabriek?is_from_webapp=1&sender_device=pc"
                 target="_blank"
                 rel="noopener noreferrer"
