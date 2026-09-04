@@ -1,16 +1,14 @@
 "use client";
 
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useActionState, type ReactNode } from "react";
+import { sendContactMessage, type ContactFormState } from "@/app/contact/actions";
+
+const initialState: ContactFormState = { status: "idle" };
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction, pending] = useActionState(sendContactMessage, initialState);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
-  }
-
-  if (submitted) {
+  if (state.status === "success") {
     return (
       <div className="rounded-2xl bg-white p-8 text-center">
         <h3 className="font-display text-lg text-ink">Message Sent</h3>
@@ -22,7 +20,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
+    <form action={formAction} className="grid gap-5 sm:grid-cols-2">
       <Field label="Your Name" htmlFor="name">
         <input id="name" name="name" type="text" required className={inputClass} />
       </Field>
@@ -39,11 +37,16 @@ export default function ContactForm() {
         <textarea id="message" name="message" required rows={5} className={inputClass} />
       </Field>
 
+      {state.status === "error" && (
+        <p className="text-sm font-medium text-red-600 sm:col-span-2">{state.message}</p>
+      )}
+
       <button
         type="submit"
-        className="inline-flex w-fit items-center rounded-full bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-gold-dark"
+        disabled={pending}
+        className="inline-flex w-fit items-center rounded-full bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Send Message
+        {pending ? "Sending…" : "Send Message"}
       </button>
     </form>
   );

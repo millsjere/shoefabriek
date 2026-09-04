@@ -12,31 +12,47 @@ export type Slide = {
   description: string;
   ctaLabel: string;
   ctaHref: string;
+  hideOnMobile?: boolean;
 };
 
 export default function HeroSlider({ slides }: { slides: Slide[] }) {
+  const [isMobile, setIsMobile] = useState(false);
   const [index, setIndex] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 639px)");
+    setIsMobile(query.matches);
+    const handleChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
+    query.addEventListener("change", handleChange);
+    return () => query.removeEventListener("change", handleChange);
+  }, []);
+
+  const visibleSlides = isMobile ? slides.filter((slide) => !slide.hideOnMobile) : slides;
+
+  useEffect(() => {
+    setIndex((i) => (i >= visibleSlides.length ? 0 : i));
+  }, [visibleSlides.length]);
+
   const goTo = useCallback(
     (i: number) => {
-      setIndex((i + slides.length) % slides.length);
+      setIndex((i + visibleSlides.length) % visibleSlides.length);
     },
-    [slides.length],
+    [visibleSlides.length],
   );
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
-      setIndex((i) => (i + 1) % slides.length);
+      setIndex((i) => (i + 1) % visibleSlides.length);
     }, 6000);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [slides.length]);
+  }, [visibleSlides.length]);
 
   return (
     <section className="relative h-[75vh] min-h-[480px] w-full overflow-hidden bg-ink text-cream sm:h-[85vh] lg:h-[100vh] lg:min-h-[600px]">
-      {slides.map((slide, i) => (
+      {visibleSlides.map((slide, i) => (
         <div
           key={slide.image}
           className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${i === index ? "opacity-100" : "pointer-events-none opacity-0"
@@ -81,7 +97,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
       ))}
 
       <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-        {slides.map((slide, i) => (
+        {visibleSlides.map((slide, i) => (
           <button
             key={slide.image}
             type="button"

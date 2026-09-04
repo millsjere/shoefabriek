@@ -66,6 +66,7 @@ const slides: Slide[] = [
       "Genuine leather, durable soles and skilled hands — every Shoe Fabriek pair is built to last.",
     ctaLabel: "Order Now",
     ctaHref: whatsappEnquiry("Hi, I'd like to know more about Shoe Fabriek's craftsmanship."),
+    hideOnMobile: true,
   },
   {
     image: "/images/categories/school-institutional.png",
